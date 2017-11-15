@@ -1,1 +1,741 @@
-<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3"><link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222"><meta name="keywords" content="algolia,"><meta name="description" content="hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。 安装hexo-algoliahexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载1cnpm uninstall hexo-algoliasearch --save 然后在安装hexo-algolia1cnpm"><meta name="keywords" content="algolia"><meta property="og:type" content="article"><meta property="og:title" content="用hexo-algolia插件为hexo增加搜索功能"><meta property="og:url" content="https://zhy.one/html/hexo-algolia.html"><meta property="og:site_name" content="际富的博客"><meta property="og:description" content="hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。 安装hexo-algoliahexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载1cnpm uninstall hexo-algoliasearch --save 然后在安装hexo-algolia1cnpm"><meta property="og:locale" content="zh-Hans"><meta property="og:image" content="http://ozaopi4bq.bkt.clouddn.com/20171114142333.png"><meta property="og:image" content="http://ozaopi4bq.bkt.clouddn.com/20171114143104.png"><meta property="og:updated_time" content="2017-11-14T12:02:49.000Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="用hexo-algolia插件为hexo增加搜索功能"><meta name="twitter:description" content="hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。 安装hexo-algoliahexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载1cnpm uninstall hexo-algoliasearch --save 然后在安装hexo-algolia1cnpm"><meta name="twitter:image" content="http://ozaopi4bq.bkt.clouddn.com/20171114142333.png"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",version:"5.1.3",sidebar:{position:"left",display:"post",offset:12,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"AEKE14BLCW",apiKey:"bff5fd14f7e8a21ddce412fc0dbed0d7",indexName:"zhy_hexo",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://zhy.one/html/hexo-algolia.html"><title>用hexo-algolia插件为hexo增加搜索功能 | 际富的博客</title></head><body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">际富的博客</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle"></p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="algolia-popup popup search-popup"><div class="algolia-search"><div class="algolia-search-input-icon"><i class="fa fa-search"></i></div><div class="algolia-search-input" id="algolia-search-input"></div></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div id="algolia-pagination" class="algolia-pagination"></div></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-algolia.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">用hexo-algolia插件为hexo增加搜索功能</h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T15:49:01+08:00">2017-11-14</time></span></div></header><div class="post-body" itemprop="articleBody"><p>hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。</p><h4 id="安装hexo-algolia"><a href="#安装hexo-algolia" class="headerlink" title="安装hexo-algolia"></a>安装hexo-algolia</h4><p>hexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall hexo-algoliasearch --save</span><br></pre></td></tr></table></figure><p></p><p>然后在安装hexo-algolia<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-algolia --save</span><br></pre></td></tr></table></figure><p></p><a id="more"></a><p>如果在卸载和安装过程中出现<code>npm WARN checkPermissions Missing write access</code>错误<br>可以先将站点目录下的node_modules文件夹删除，然后运行<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure><p></p><h4 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h4><p>打开根目录下配置文件_config.yml,增加以下内容<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#hexo-algolia</span><br><span class="line">algolia:</span><br><span class="line">  applicationID: &apos;AEKE14BLCW&apos;</span><br><span class="line">  apiKey: &apos;bff5fd14f7e8a21ddce412fc0dbed0d7&apos;</span><br><span class="line">  indexName: &apos;zhy_hexo&apos;</span><br></pre></td></tr></table></figure><p></p><h4 id="修改主题配置文件-config-yml"><a href="#修改主题配置文件-config-yml" class="headerlink" title="修改主题配置文件_config.yml"></a>修改主题配置文件_config.yml</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 将enable改成true</span><br><span class="line">algolia_search:</span><br><span class="line">  enable: true</span><br><span class="line">  hits:</span><br><span class="line">    per_page: 10</span><br><span class="line">  labels:</span><br><span class="line">    input_placeholder: Search for Posts</span><br><span class="line">    hits_empty: &quot;We didn&apos;t find any results for the search: $&#123;query&#125;&quot;</span><br><span class="line">    hits_stats: &quot;$&#123;hits&#125; results found in $&#123;time&#125; ms&quot;</span><br></pre></td></tr></table></figure><h4 id="新建hexo-algolia-indexing-key"><a href="#新建hexo-algolia-indexing-key" class="headerlink" title="新建hexo-algolia indexing key"></a>新建hexo-algolia indexing key</h4><p>页面设置地址<code>https://www.algolia.com/apps/你的appId/api-keys/restricted</code><br>点击<code>NEW API KEY</code>新建<code>hexo-algolia indexing key</code><br><img src="http://ozaopi4bq.bkt.clouddn.com/20171114142333.png" alt="new api key"><br><img src="http://ozaopi4bq.bkt.clouddn.com/20171114143104.png" alt="new api key"></p><h4 id="新建环境变量HEXO-ALGOLIA-INDEXING-KEY"><a href="#新建环境变量HEXO-ALGOLIA-INDEXING-KEY" class="headerlink" title="新建环境变量HEXO_ALGOLIA_INDEXING_KEY"></a>新建环境变量HEXO_ALGOLIA_INDEXING_KEY</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ export HEXO_ALGOLIA_INDEXING_KEY=093xxxxxxec5a71axxxxxxxeec9abcf5</span><br></pre></td></tr></table></figure><p>查看环境变量HEXO_ALGOLIA_INDEXING_KEY是否已经存在<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ export | grep ALGOLIA</span><br></pre></td></tr></table></figure><p></p><p>但每次重新打开git bash窗口的时候，这个环境变量又没有了，为了解决这个问题，我们在用户目录下新建个.bash_profile文件<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure><p></p><p>然后增加以下内容<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export HEXO_ALGOLIA_INDEXING_KEY=093xxxxxxec5a71axxxxxxxeec9abcf5</span><br></pre></td></tr></table></figure><p></p><p>这样，以后每次运行git bash，这个环境变量HEXO_ALGOLIA_INDEXING_KEY一直存在</p><h4 id="运行hexo-algolia"><a href="#运行hexo-algolia" class="headerlink" title="运行hexo algolia"></a>运行hexo algolia</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ hexo algolia</span><br><span class="line">INFO  [Algolia] Testing HEXO_ALGOLIA_INDEXING_KEY permissions.</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  [Algolia] Identified 8 pages and posts to index.</span><br><span class="line">INFO  [Algolia] Indexing chunk 1 of 1 (50 items each)</span><br><span class="line">INFO  [Algolia] Indexing done.</span><br></pre></td></tr></table></figure></div><footer class="post-footer"><div class="post-tags"> <a href="/tags/algolia/" rel="tag"># algolia</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/html/hexo-algoliasearch-error.html" rel="next" title="解决AlgoliaSearchError的问题"><i class="fa fa-chevron-left"></i> 解决AlgoliaSearchError的问题</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/html/gulpuglifyerror-minify-javascript.html" rel="prev" title="解决GulpUglifyError:unable to minify JavaScript问题">解决GulpUglifyError:unable to minify JavaScript问题<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"></div></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap"> 站点概览</li></ul><section class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><p class="site-author-name" itemprop="name">zhy</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">10</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-tags"> <span class="site-state-item-count">8</span> <span class="site-state-item-name">标签</span></div></nav><div class="links-of-author motion-element"></div></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo-algolia"><span class="nav-number">1.</span> <span class="nav-text">安装hexo-algolia</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改站点配置文件-config-yml"><span class="nav-number">2.</span> <span class="nav-text">修改站点配置文件_config.yml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改主题配置文件-config-yml"><span class="nav-number">3.</span> <span class="nav-text">修改主题配置文件_config.yml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建hexo-algolia-indexing-key"><span class="nav-number">4.</span> <span class="nav-text">新建hexo-algolia indexing key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建环境变量HEXO-ALGOLIA-INDEXING-KEY"><span class="nav-number">5.</span> <span class="nav-text">新建环境变量HEXO_ALGOLIA_INDEXING_KEY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行hexo-algolia"><span class="nav-number">6.</span> <span class="nav-text">运行hexo algolia</span></a></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2017</span><span class="with-love"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">zhy</span></div><div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io" rel="external nofollow noopener noreferrer">Hexo</a> | Hosted by <a href="https://pages.coding.me" style="font-weight:700" target="_blank" rel="external nofollow noopener noreferrer">Coding Pages</a></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css"><script src="/lib/algolia-instant-search/instantsearch.min.js"></script><script src="/js/src/algolia-search.js?v=5.1.3"></script></body></html>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="algolia,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。 安装hexo-algoliahexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载1cnpm uninstall hexo-algoliasearch --save 然后在安装hexo-algolia1cnpm">
+<meta name="keywords" content="algolia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用hexo-algolia插件为hexo增加搜索功能">
+<meta property="og:url" content="https://zhy.one/html/hexo-algolia.html">
+<meta property="og:site_name" content="际富的博客">
+<meta property="og:description" content="hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。 安装hexo-algoliahexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载1cnpm uninstall hexo-algoliasearch --save 然后在安装hexo-algolia1cnpm">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ozaopi4bq.bkt.clouddn.com/20171114142333.png">
+<meta property="og:image" content="http://ozaopi4bq.bkt.clouddn.com/20171114143104.png">
+<meta property="og:updated_time" content="2017-11-14T12:02:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用hexo-algolia插件为hexo增加搜索功能">
+<meta name="twitter:description" content="hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。 安装hexo-algoliahexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载1cnpm uninstall hexo-algoliasearch --save 然后在安装hexo-algolia1cnpm">
+<meta name="twitter:image" content="http://ozaopi4bq.bkt.clouddn.com/20171114142333.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'AEKE14BLCW',
+      apiKey: 'bff5fd14f7e8a21ddce412fc0dbed0d7',
+      indexName: 'zhy_hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zhy.one/html/hexo-algolia.html">
+
+
+
+
+
+  <title>用hexo-algolia插件为hexo增加搜索功能 | 际富的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">际富的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-algolia.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">用hexo-algolia插件为hexo增加搜索功能</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T15:49:01+08:00">
+                2017-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。</p>
+<h4 id="安装hexo-algolia"><a href="#安装hexo-algolia" class="headerlink" title="安装hexo-algolia"></a>安装hexo-algolia</h4><p>hexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall hexo-algoliasearch --save</span><br></pre></td></tr></table></figure></p>
+<p>然后在安装hexo-algolia<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-algolia --save</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>如果在卸载和安装过程中出现<code>npm WARN checkPermissions Missing write access</code>错误<br>可以先将站点目录下的node_modules文件夹删除，然后运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h4><p>打开根目录下配置文件_config.yml,增加以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#hexo-algolia</span><br><span class="line">algolia:</span><br><span class="line">  applicationID: &apos;AEKE14BLCW&apos;</span><br><span class="line">  apiKey: &apos;bff5fd14f7e8a21ddce412fc0dbed0d7&apos;</span><br><span class="line">  indexName: &apos;zhy_hexo&apos;</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改主题配置文件-config-yml"><a href="#修改主题配置文件-config-yml" class="headerlink" title="修改主题配置文件_config.yml"></a>修改主题配置文件_config.yml</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 将enable改成true</span><br><span class="line">algolia_search:</span><br><span class="line">  enable: true</span><br><span class="line">  hits:</span><br><span class="line">    per_page: 10</span><br><span class="line">  labels:</span><br><span class="line">    input_placeholder: Search for Posts</span><br><span class="line">    hits_empty: &quot;We didn&apos;t find any results for the search: $&#123;query&#125;&quot;</span><br><span class="line">    hits_stats: &quot;$&#123;hits&#125; results found in $&#123;time&#125; ms&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="新建hexo-algolia-indexing-key"><a href="#新建hexo-algolia-indexing-key" class="headerlink" title="新建hexo-algolia indexing key"></a>新建hexo-algolia indexing key</h4><p>页面设置地址<code>https://www.algolia.com/apps/你的appId/api-keys/restricted</code><br>点击<code>NEW API KEY</code>新建<code>hexo-algolia indexing key</code><br><img src="http://ozaopi4bq.bkt.clouddn.com/20171114142333.png" alt="new api key"><br><img src="http://ozaopi4bq.bkt.clouddn.com/20171114143104.png" alt="new api key"></p>
+<h4 id="新建环境变量HEXO-ALGOLIA-INDEXING-KEY"><a href="#新建环境变量HEXO-ALGOLIA-INDEXING-KEY" class="headerlink" title="新建环境变量HEXO_ALGOLIA_INDEXING_KEY"></a>新建环境变量HEXO_ALGOLIA_INDEXING_KEY</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ export HEXO_ALGOLIA_INDEXING_KEY=093xxxxxxec5a71axxxxxxxeec9abcf5</span><br></pre></td></tr></table></figure>
+<p>查看环境变量HEXO_ALGOLIA_INDEXING_KEY是否已经存在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ export | grep ALGOLIA</span><br></pre></td></tr></table></figure></p>
+<p>但每次重新打开git bash窗口的时候，这个环境变量又没有了，为了解决这个问题，我们在用户目录下新建个.bash_profile文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>然后增加以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export HEXO_ALGOLIA_INDEXING_KEY=093xxxxxxec5a71axxxxxxxeec9abcf5</span><br></pre></td></tr></table></figure></p>
+<p>这样，以后每次运行git bash，这个环境变量HEXO_ALGOLIA_INDEXING_KEY一直存在</p>
+<h4 id="运行hexo-algolia"><a href="#运行hexo-algolia" class="headerlink" title="运行hexo algolia"></a>运行hexo algolia</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ hexo algolia</span><br><span class="line">INFO  [Algolia] Testing HEXO_ALGOLIA_INDEXING_KEY permissions.</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  [Algolia] Identified 8 pages and posts to index.</span><br><span class="line">INFO  [Algolia] Indexing chunk 1 of 1 (50 items each)</span><br><span class="line">INFO  [Algolia] Indexing done.</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algolia/" rel="tag"># algolia</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/html/hexo-algoliasearch-error.html" rel="next" title="解决AlgoliaSearchError的问题">
+                <i class="fa fa-chevron-left"></i> 解决AlgoliaSearchError的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/html/gulpuglifyerror-minify-javascript.html" rel="prev" title="解决GulpUglifyError:unable to minify JavaScript问题">
+                解决GulpUglifyError:unable to minify JavaScript问题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">zhy</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo-algolia"><span class="nav-number">1.</span> <span class="nav-text">安装hexo-algolia</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改站点配置文件-config-yml"><span class="nav-number">2.</span> <span class="nav-text">修改站点配置文件_config.yml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改主题配置文件-config-yml"><span class="nav-number">3.</span> <span class="nav-text">修改主题配置文件_config.yml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建hexo-algolia-indexing-key"><span class="nav-number">4.</span> <span class="nav-text">新建hexo-algolia indexing key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建环境变量HEXO-ALGOLIA-INDEXING-KEY"><span class="nav-number">5.</span> <span class="nav-text">新建环境变量HEXO_ALGOLIA_INDEXING_KEY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行hexo-algolia"><span class="nav-number">6.</span> <span class="nav-text">运行hexo algolia</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhy</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io" rel="external nofollow noopener noreferrer">Hexo</a> | Hosted by <a href="https://pages.coding.me" style="font-weight: bold " target="_blank" rel="external nofollow noopener noreferrer">Coding Pages</a></div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,1 +1,1797 @@
-<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3"><link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222"><meta name="keywords" content="Hexo,际富"><meta property="og:type" content="website"><meta property="og:title" content="际富的博客"><meta property="og:url" content="https://zhy.one/index.html"><meta property="og:site_name" content="际富的博客"><meta property="og:locale" content="zh-Hans"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="际富的博客"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",version:"5.1.3",sidebar:{position:"left",display:"post",offset:12,b2t:!1,scrollpercent:!1,onmobile:!1},fancybox:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"AEKE14BLCW",apiKey:"bff5fd14f7e8a21ddce412fc0dbed0d7",indexName:"zhy_hexo",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://zhy.one/"><title>际富的博客</title></head><body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-home"><div class="headband"></div><header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">际富的博客</span><span class="logo-line-after"><i></i></span></a></div><p class="site-subtitle"></p></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="algolia-popup popup search-popup"><div class="algolia-search"><div class="algolia-search-input-icon"><i class="fa fa-search"></i></div><div class="algolia-search-input" id="algolia-search-input"></div></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div id="algolia-pagination" class="algolia-pagination"></div></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><section id="posts" class="posts-expand"><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-coding-github-both-repo.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/hexo-coding-github-both-repo.html" itemprop="url">将hexo同时部署到coding和github上</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T16:17:00+08:00">2017-11-15</time></span></div></header><div class="post-body" itemprop="articleBody"><p>将hexo博客同时部署到coding.net和github.com上，并且设置dns，让国内用户访问coding站点，让国外用户访问github站点。<br>coding.net对国内用户访问速度快，特别是百度蜘蛛比较友好，而github屏蔽了百度蜘蛛的抓取，对google蜘蛛抓取比较友好，对国外用户访问速度快。<br></p><div class="post-button text-center"> <a class="btn" href="/html/hexo-coding-github-both-repo.html#more" rel="contents">阅读全文 &raquo;</a></div><p></p></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulpuglifyerror-minify-javascript.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/gulpuglifyerror-minify-javascript.html" itemprop="url">解决GulpUglifyError:unable to minify JavaScript问题</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T12:51:34+08:00">2017-11-15</time></span></div></header><div class="post-body" itemprop="articleBody"><p>在进行gulp压缩时，出现以下错误<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">events.js:160</span><br><span class="line">      throw er; // Unhandled &apos;error&apos; event</span><br><span class="line">      ^</span><br><span class="line">GulpUglifyError: unable to minify JavaScript</span><br><span class="line">    at createError (E:\zhyone\blog\node_modules\_gulp-uglify@3.0.0@gulp-uglify\lib\create-error.js:6:14)</span><br><span class="line">    at apply (E:\zhyone\blog\node_modules\_lodash@4.17.4@lodash\_apply.js:16:25)</span><br><span class="line">    at wrapper (E:\zhyone\blog\node_modules\_lodash@4.17.4@lodash\_createCurry.js:41:12)</span><br><span class="line">    at E:\zhyone\blog\node_modules\_gulp-uglify@3.0.0@gulp-uglify\lib\minify.js:54:15</span><br><span class="line">    at DestroyableTransform._transform (E:\zhyone\blog\node_modules\_gulp-uglify@3.0.0@gulp-uglify\composer.js:10:23)</span><br><span class="line">    at DestroyableTransform.Transform._read (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_transform.js:182:10)</span><br><span class="line">    at DestroyableTransform.Transform._write (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_transform.js:170:83)</span><br><span class="line">    at doWrite (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_writable.js:406:64)</span><br><span class="line">    at writeOrBuffer (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_writable.js:395:5)</span><br><span class="line">    at DestroyableTransform.Writable.write (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_writable.js:322:11)</span><br><span class="line">    at write (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:623:24)</span><br><span class="line">    at flow (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:632:7)</span><br><span class="line">    at DestroyableTransform.pipeOnReadable (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:664:5)</span><br><span class="line">    at emitNone (events.js:86:13)</span><br><span class="line">    at DestroyableTransform.emit (events.js:185:7)</span><br><span class="line">    at emitReadable_ (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:448:10)</span><br></pre></td></tr></table></figure><p></p><p>网上查找，提供的解决方法是，用gulp-util插件处理。<br></p><div class="post-button text-center"> <a class="btn" href="/html/gulpuglifyerror-minify-javascript.html#more" rel="contents">阅读全文 &raquo;</a></div><p></p></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-algolia.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/hexo-algolia.html" itemprop="url">用hexo-algolia插件为hexo增加搜索功能</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T15:49:01+08:00">2017-11-14</time></span></div></header><div class="post-body" itemprop="articleBody"><p>hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。</p><h4 id="安装hexo-algolia"><a href="#安装hexo-algolia" class="headerlink" title="安装hexo-algolia"></a>安装hexo-algolia</h4><p>hexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall hexo-algoliasearch --save</span><br></pre></td></tr></table></figure><p></p><p>然后在安装hexo-algolia<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-algolia --save</span><br></pre></td></tr></table></figure><p></p><div class="post-button text-center"> <a class="btn" href="/html/hexo-algolia.html#more" rel="contents">阅读全文 &raquo;</a></div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-algoliasearch-error.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/hexo-algoliasearch-error.html" itemprop="url">解决AlgoliaSearchError的问题</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T13:44:37+08:00">2017-11-14</time></span></div></header><div class="post-body" itemprop="articleBody"><p>为了实现全文搜索，用hexo-algoliasearch代替hexo-algolia插件，在进行<code>hexo algolia</code>时，出现以下错误<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">E:\zhyone\blog\node_modules\bluebird\js\release\async.js:61</span><br><span class="line">        fn = function () &#123; throw arg; &#125;;</span><br><span class="line">                           ^</span><br><span class="line">AlgoliaSearchError: Please provide an application ID. Usage: algoliasearch(applicationID, apiKey, opts)</span><br><span class="line">    at AlgoliaSearchNodeJS.AlgoliaSearchCore (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\AlgoliaSearchCore.js:51:11)</span><br><span class="line">    at AlgoliaSearchNodeJS.AlgoliaSearch (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\AlgoliaSearch.js:11:21)</span><br><span class="line">    at AlgoliaSearchNodeJS.AlgoliaSearchServer (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\server\builds\AlgoliaSearchServer.js:17:17)</span><br><span class="line">    at new AlgoliaSearchNodeJS (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\server\builds\node.js:79:23)</span><br><span class="line">    at algoliasearch (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\server\builds\node.js:68:10)</span><br><span class="line">    at E:\zhyone\blog\node_modules\_hexo-algoliasearch@0.2.1@hexo-algoliasearch\lib\algolia.js:119:18</span><br><span class="line">    at tryCatcher (E:\zhyone\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Promise.successAdapter [as _fulfillmentHandler0] (E:\zhyone\blog\node_modules\bluebird\js\release\nodeify.js:22:30)</span><br><span class="line">    at Promise._settlePromise (E:\zhyone\blog\node_modules\bluebird\js\release\promise.js:566:21)</span><br><span class="line">    at Promise._settlePromise0 (E:\zhyone\blog\node_modules\bluebird\js\release\promise.js:614:10)</span><br><span class="line">    at Promise._settlePromises (E:\zhyone\blog\node_modules\bluebird\js\release\promise.js:693:18)</span><br><span class="line">    at Async._drainQueue (E:\zhyone\blog\node_modules\bluebird\js\release\async.js:133:16)</span><br><span class="line">    at Async._drainQueues (E:\zhyone\blog\node_modules\bluebird\js\release\async.js:143:10)</span><br><span class="line">    at Immediate.Async.drainQueues (E:\zhyone\blog\node_modules\bluebird\js\release\async.js:17:14)</span><br><span class="line">    at runCallback (timers.js:672:20)</span><br><span class="line">    at tryOnImmediate (timers.js:645:5)</span><br><span class="line">    at processImmediate [as _immediateCallback] (timers.js:617:5)</span><br></pre></td></tr></table></figure><p></p><p>大致意思是找不到application ID。<br></p><div class="post-button text-center"> <a class="btn" href="/html/hexo-algoliasearch-error.html#more" rel="contents">阅读全文 &raquo;</a></div><p></p></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-autonofollow-seo.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/hexo-autonofollow-seo.html" itemprop="url">使用hexo-autonofollow有利于seo</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T20:03:51+08:00">2017-11-12</time></span></div></header><div class="post-body" itemprop="articleBody"><p>网站出站外链增加nofollow属性有利于seo，hexo提供了hexo-autonofollow这个插件</p><h4 id="安装hexo-autonofollow"><a href="#安装hexo-autonofollow" class="headerlink" title="安装hexo-autonofollow"></a>安装hexo-autonofollow</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-autonofollow --save</span><br></pre></td></tr></table></figure><div class="post-button text-center"> <a class="btn" href="/html/hexo-autonofollow-seo.html#more" rel="contents">阅读全文 &raquo;</a></div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/nrm-npm-registry.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/nrm-npm-registry.html" itemprop="url">使用nrm管理和切换npm的registry</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T19:45:45+08:00">2017-11-12</time></span></div></header><div class="post-body" itemprop="articleBody"><p>npm官方的registry不是很稳定，而且比较慢，用nrm来切换到其他registry，很方便<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure><p></p><div class="post-button text-center"> <a class="btn" href="/html/nrm-npm-registry.html#more" rel="contents">阅读全文 &raquo;</a></div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulp-imagemin-crossspawn-enoentjs-error.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/gulp-imagemin-crossspawn-enoentjs-error.html" itemprop="url">解决gulp-imagemin执行时enoent.js错误问题</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T19:25:25+08:00">2017-11-12</time></span></div></header><div class="post-body" itemprop="articleBody"><p>在执行gulp，运行到gulp-imagemin压缩图片时，出现以下错误<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">events.js:183</span><br><span class="line">      throw er; // Unhandled &apos;error&apos; event</span><br><span class="line">      ^</span><br><span class="line">Error:   ·    </span><br><span class="line">    at notFoundError (D:\zhyone\blog\node_modules\execa\node_modules\cross-spawn\lib\enoent.js:11:11)</span><br><span class="line">    at verifyENOENT (D:\zhyone\blog\node_modules\execa\node_modules\cross-spawn\lib\enoent.js:46:16)</span><br><span class="line">    at ChildProcess.cp.emit (D:\zhyone\blog\node_modules\execa\node_modules\cross-spawn\lib\enoent.js:33:19)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)</span><br></pre></td></tr></table></figure><p></p><div class="post-button text-center"> <a class="btn" href="/html/gulp-imagemin-crossspawn-enoentjs-error.html#more" rel="contents">阅读全文 &raquo;</a></div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulp-minify-page-size.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/gulp-minify-page-size.html" itemprop="url">通过gulp压缩去除html多余空白行</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T17:41:31+08:00">2017-11-12</time></span></div></header><div class="post-body" itemprop="articleBody"><p>默认情况下，使用hexo的next主题，页面会出现很多的空白行，可以通过gulp来对html压缩，去除这些空白行，同时gulp还能压缩css，图片等文件。减少网站整体的尺寸大小。<br></p><div class="post-button text-center"> <a class="btn" href="/html/gulp-minify-page-size.html#more" rel="contents">阅读全文 &raquo;</a></div><p></p></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/nodejs-install-permission-windows10.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/nodejs-install-permission-windows10.html" itemprop="url">解决windows10上安装Node.js的权限问题</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T17:14:03+08:00">2017-11-12</time></span></div></header><div class="post-body" itemprop="articleBody"><p>在windows10上安装Node.js时，显示以下错误</p><blockquote><p>There is a problem with this Windows Installer package.<br>A DLL required for this install to complete could not be run.<br>Contact your support personnel or package vendor.</p></blockquote><p>主要是因为权限不够。<br></p><div class="post-button text-center"> <a class="btn" href="/html/nodejs-install-permission-windows10.html#more" rel="contents">阅读全文 &raquo;</a></div><p></p></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulp-clean-css-rebase-false.html"><span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person"><meta itemprop="name" content="zhy"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization"><meta itemprop="name" content="际富的博客"></span><header class="post-header"><h1 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/html/gulp-clean-css-rebase-false.html" itemprop="url">解决gulp压缩css后icon图标不显示问题</a></h1><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T16:12:33+08:00">2017-11-12</time></span></div></header><div class="post-body" itemprop="articleBody"><p>为了减少网站内容容量大小，提高网站访问速度，选择进行gulp压缩后再发布。<br>在用gulp对css，html，图片等文件压缩之后，出现一个问题，就是原先显示的icon图标不见了。<br></p><div class="post-button text-center"> <a class="btn" href="/html/gulp-clean-css-rebase-false.html#more" rel="contents">阅读全文 &raquo;</a></div><p></p></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article></section></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><section class="site-overview-wrap sidebar-panel sidebar-panel-active"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><p class="site-author-name" itemprop="name">zhy</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">10</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-tags"> <span class="site-state-item-count">8</span> <span class="site-state-item-name">标签</span></div></nav><div class="links-of-author motion-element"></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; <span itemprop="copyrightYear">2017</span><span class="with-love"><i class="fa fa-user"></i></span> <span class="author" itemprop="copyrightHolder">zhy</span></div><div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io" rel="external nofollow noopener noreferrer">Hexo</a> | Hosted by <a href="https://pages.coding.me" style="font-weight:700" target="_blank" rel="external nofollow noopener noreferrer">Coding Pages</a></div></div></footer><div class="back-to-top"><i class="fa fa-arrow-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script><script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine/dist/Valine.min.js"></script><link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css"><script src="/lib/algolia-instant-search/instantsearch.min.js"></script><script src="/js/src/algolia-search.js?v=5.1.3"></script></body></html>
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo,际富">
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="际富的博客">
+<meta property="og:url" content="https://zhy.one/index.html">
+<meta property="og:site_name" content="际富的博客">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="际富的博客">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'AEKE14BLCW',
+      apiKey: 'bff5fd14f7e8a21ddce412fc0dbed0d7',
+      indexName: 'zhy_hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zhy.one/">
+
+
+
+
+
+  <title>际富的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">际富的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-coding-github-both-repo.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/hexo-coding-github-both-repo.html" itemprop="url">将hexo同时部署到coding和github上</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T16:17:00+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>将hexo博客同时部署到coding.net和github.com上，并且设置dns，让国内用户访问coding站点，让国外用户访问github站点。<br>coding.net对国内用户访问速度快，特别是百度蜘蛛比较友好，而github屏蔽了百度蜘蛛的抓取，对google蜘蛛抓取比较友好，对国外用户访问速度快。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/hexo-coding-github-both-repo.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulpuglifyerror-minify-javascript.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/gulpuglifyerror-minify-javascript.html" itemprop="url">解决GulpUglifyError:unable to minify JavaScript问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T12:51:34+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在进行gulp压缩时，出现以下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">events.js:160</span><br><span class="line">      throw er; // Unhandled &apos;error&apos; event</span><br><span class="line">      ^</span><br><span class="line">GulpUglifyError: unable to minify JavaScript</span><br><span class="line">    at createError (E:\zhyone\blog\node_modules\_gulp-uglify@3.0.0@gulp-uglify\lib\create-error.js:6:14)</span><br><span class="line">    at apply (E:\zhyone\blog\node_modules\_lodash@4.17.4@lodash\_apply.js:16:25)</span><br><span class="line">    at wrapper (E:\zhyone\blog\node_modules\_lodash@4.17.4@lodash\_createCurry.js:41:12)</span><br><span class="line">    at E:\zhyone\blog\node_modules\_gulp-uglify@3.0.0@gulp-uglify\lib\minify.js:54:15</span><br><span class="line">    at DestroyableTransform._transform (E:\zhyone\blog\node_modules\_gulp-uglify@3.0.0@gulp-uglify\composer.js:10:23)</span><br><span class="line">    at DestroyableTransform.Transform._read (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_transform.js:182:10)</span><br><span class="line">    at DestroyableTransform.Transform._write (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_transform.js:170:83)</span><br><span class="line">    at doWrite (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_writable.js:406:64)</span><br><span class="line">    at writeOrBuffer (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_writable.js:395:5)</span><br><span class="line">    at DestroyableTransform.Writable.write (E:\zhyone\blog\node_modules\_readable-stream@2.3.3@readable-stream\lib\_stream_writable.js:322:11)</span><br><span class="line">    at write (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:623:24)</span><br><span class="line">    at flow (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:632:7)</span><br><span class="line">    at DestroyableTransform.pipeOnReadable (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:664:5)</span><br><span class="line">    at emitNone (events.js:86:13)</span><br><span class="line">    at DestroyableTransform.emit (events.js:185:7)</span><br><span class="line">    at emitReadable_ (E:\zhyone\blog\node_modules\_readable-stream@1.0.34@readable-stream\lib\_stream_readable.js:448:10)</span><br></pre></td></tr></table></figure></p>
+<p>网上查找，提供的解决方法是，用gulp-util插件处理。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/gulpuglifyerror-minify-javascript.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-algolia.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/hexo-algolia.html" itemprop="url">用hexo-algolia插件为hexo增加搜索功能</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T15:49:01+08:00">
+                2017-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>hexo提供了一个搜索功能插件hexo-algolia，可以用它为博客增加搜索功能。</p>
+<h4 id="安装hexo-algolia"><a href="#安装hexo-algolia" class="headerlink" title="安装hexo-algolia"></a>安装hexo-algolia</h4><p>hexo-algolia和hexo-algoliasearch两个插件在一起会产生冲突，所以，如果之前安装过hexo-algoliasearch，先把它卸载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall hexo-algoliasearch --save</span><br></pre></td></tr></table></figure></p>
+<p>然后在安装hexo-algolia<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-algolia --save</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/hexo-algolia.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-algoliasearch-error.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/hexo-algoliasearch-error.html" itemprop="url">解决AlgoliaSearchError的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T13:44:37+08:00">
+                2017-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>为了实现全文搜索，用hexo-algoliasearch代替hexo-algolia插件，在进行<code>hexo algolia</code>时，出现以下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">E:\zhyone\blog\node_modules\bluebird\js\release\async.js:61</span><br><span class="line">        fn = function () &#123; throw arg; &#125;;</span><br><span class="line">                           ^</span><br><span class="line">AlgoliaSearchError: Please provide an application ID. Usage: algoliasearch(applicationID, apiKey, opts)</span><br><span class="line">    at AlgoliaSearchNodeJS.AlgoliaSearchCore (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\AlgoliaSearchCore.js:51:11)</span><br><span class="line">    at AlgoliaSearchNodeJS.AlgoliaSearch (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\AlgoliaSearch.js:11:21)</span><br><span class="line">    at AlgoliaSearchNodeJS.AlgoliaSearchServer (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\server\builds\AlgoliaSearchServer.js:17:17)</span><br><span class="line">    at new AlgoliaSearchNodeJS (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\server\builds\node.js:79:23)</span><br><span class="line">    at algoliasearch (E:\zhyone\blog\node_modules\_algoliasearch@3.24.5@algoliasearch\src\server\builds\node.js:68:10)</span><br><span class="line">    at E:\zhyone\blog\node_modules\_hexo-algoliasearch@0.2.1@hexo-algoliasearch\lib\algolia.js:119:18</span><br><span class="line">    at tryCatcher (E:\zhyone\blog\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Promise.successAdapter [as _fulfillmentHandler0] (E:\zhyone\blog\node_modules\bluebird\js\release\nodeify.js:22:30)</span><br><span class="line">    at Promise._settlePromise (E:\zhyone\blog\node_modules\bluebird\js\release\promise.js:566:21)</span><br><span class="line">    at Promise._settlePromise0 (E:\zhyone\blog\node_modules\bluebird\js\release\promise.js:614:10)</span><br><span class="line">    at Promise._settlePromises (E:\zhyone\blog\node_modules\bluebird\js\release\promise.js:693:18)</span><br><span class="line">    at Async._drainQueue (E:\zhyone\blog\node_modules\bluebird\js\release\async.js:133:16)</span><br><span class="line">    at Async._drainQueues (E:\zhyone\blog\node_modules\bluebird\js\release\async.js:143:10)</span><br><span class="line">    at Immediate.Async.drainQueues (E:\zhyone\blog\node_modules\bluebird\js\release\async.js:17:14)</span><br><span class="line">    at runCallback (timers.js:672:20)</span><br><span class="line">    at tryOnImmediate (timers.js:645:5)</span><br><span class="line">    at processImmediate [as _immediateCallback] (timers.js:617:5)</span><br></pre></td></tr></table></figure></p>
+<p>大致意思是找不到application ID。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/hexo-algoliasearch-error.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/hexo-autonofollow-seo.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/hexo-autonofollow-seo.html" itemprop="url">使用hexo-autonofollow有利于seo</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T20:03:51+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>网站出站外链增加nofollow属性有利于seo，hexo提供了hexo-autonofollow这个插件</p>
+<h4 id="安装hexo-autonofollow"><a href="#安装hexo-autonofollow" class="headerlink" title="安装hexo-autonofollow"></a>安装hexo-autonofollow</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-autonofollow --save</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/hexo-autonofollow-seo.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/nrm-npm-registry.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/nrm-npm-registry.html" itemprop="url">使用nrm管理和切换npm的registry</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T19:45:45+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>npm官方的registry不是很稳定，而且比较慢，用nrm来切换到其他registry，很方便<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/nrm-npm-registry.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulp-imagemin-crossspawn-enoentjs-error.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/gulp-imagemin-crossspawn-enoentjs-error.html" itemprop="url">解决gulp-imagemin执行时enoent.js错误问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T19:25:25+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在执行gulp，运行到gulp-imagemin压缩图片时，出现以下错误<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">events.js:183</span><br><span class="line">      throw er; // Unhandled &apos;error&apos; event</span><br><span class="line">      ^</span><br><span class="line">Error:   ·    </span><br><span class="line">    at notFoundError (D:\zhyone\blog\node_modules\execa\node_modules\cross-spawn\lib\enoent.js:11:11)</span><br><span class="line">    at verifyENOENT (D:\zhyone\blog\node_modules\execa\node_modules\cross-spawn\lib\enoent.js:46:16)</span><br><span class="line">    at ChildProcess.cp.emit (D:\zhyone\blog\node_modules\execa\node_modules\cross-spawn\lib\enoent.js:33:19)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/gulp-imagemin-crossspawn-enoentjs-error.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulp-minify-page-size.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/gulp-minify-page-size.html" itemprop="url">通过gulp压缩去除html多余空白行</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T17:41:31+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>默认情况下，使用hexo的next主题，页面会出现很多的空白行，可以通过gulp来对html压缩，去除这些空白行，同时gulp还能压缩css，图片等文件。减少网站整体的尺寸大小。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/gulp-minify-page-size.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/nodejs-install-permission-windows10.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/nodejs-install-permission-windows10.html" itemprop="url">解决windows10上安装Node.js的权限问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T17:14:03+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>在windows10上安装Node.js时，显示以下错误</p>
+<blockquote>
+<p>There is a problem with this Windows Installer package.<br>A DLL required for this install to complete could not be run.<br>Contact your support personnel or package vendor.</p>
+</blockquote>
+<p>主要是因为权限不够。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/nodejs-install-permission-windows10.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhy.one/html/gulp-clean-css-rebase-false.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="际富的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/html/gulp-clean-css-rebase-false.html" itemprop="url">解决gulp压缩css后icon图标不显示问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T16:12:33+08:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>为了减少网站内容容量大小，提高网站访问速度，选择进行gulp压缩后再发布。<br>在用gulp对css，html，图片等文件压缩之后，出现一个问题，就是原先显示的icon图标不见了。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/html/gulp-clean-css-rebase-false.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">zhy</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhy</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io" rel="external nofollow noopener noreferrer">Hexo</a> | Hosted by <a href="https://pages.coding.me" style="font-weight: bold " target="_blank" rel="external nofollow noopener noreferrer">Coding Pages</a></div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
