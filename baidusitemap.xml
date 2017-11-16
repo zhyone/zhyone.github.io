@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-coding-github-both-repo.html</loc>
+    <lastmod>2017-11-15T12:30:55.935Z</lastmod>
+    <data>
+        <display>
+        <title>将hexo同时部署到coding和github上</title>
+        <pubTime>2017-11-15T08:17:00.000Z</pubTime>
+        
+        <tag>coding</tag>
+         
+        <tag>github</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/gulpuglifyerror-minify-javascript.html</loc>
+    <lastmod>2017-11-15T05:16:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决GulpUglifyError:unable to minify JavaScript问题</title>
+        <pubTime>2017-11-15T04:51:34.000Z</pubTime>
+        
+        <tag>gulp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/gulp-minify-page-size.html</loc>
+    <lastmod>2017-11-14T14:00:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>通过gulp压缩去除html多余空白行</title>
+        <pubTime>2017-11-12T09:41:31.000Z</pubTime>
+        
+        <tag>gulp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/gulp-clean-css-rebase-false.html</loc>
+    <lastmod>2017-11-14T12:58:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决gulp压缩css后icon图标不显示问题</title>
+        <pubTime>2017-11-12T08:12:33.000Z</pubTime>
+        
+        <tag>gulp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-algolia.html</loc>
+    <lastmod>2017-11-14T12:02:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>用hexo-algolia插件为hexo增加搜索功能</title>
+        <pubTime>2017-11-14T07:49:01.000Z</pubTime>
+        
+        <tag>algolia</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-algoliasearch-error.html</loc>
+    <lastmod>2017-11-14T06:45:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决AlgoliaSearchError的问题</title>
+        <pubTime>2017-11-14T05:44:37.000Z</pubTime>
+        
+        <tag>algolia</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-autonofollow-seo.html</loc>
+    <lastmod>2017-11-12T12:12:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用hexo-autonofollow有利于seo</title>
+        <pubTime>2017-11-12T12:03:51.000Z</pubTime>
+        
+        <tag>seo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/nrm-npm-registry.html</loc>
+    <lastmod>2017-11-12T12:00:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用nrm管理和切换npm的registry</title>
+        <pubTime>2017-11-12T11:45:45.000Z</pubTime>
+        
+        <tag>nrm</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/gulp-imagemin-crossspawn-enoentjs-error.html</loc>
+    <lastmod>2017-11-12T11:37:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决gulp-imagemin执行时enoent.js错误问题</title>
+        <pubTime>2017-11-12T11:25:25.000Z</pubTime>
+        
+        <tag>gulp</tag>
+         
+        <tag>gulp-imagemin</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/nodejs-install-permission-windows10.html</loc>
+    <lastmod>2017-11-12T09:34:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决windows10上安装Node.js的权限问题</title>
+        <pubTime>2017-11-12T09:14:03.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>
