@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://zhy.one/html/hexo-github.html</loc>
-    <lastmod>2017-11-19T05:55:50.185Z</lastmod>
+    <lastmod>2017-11-19T05:59:28.765Z</lastmod>
     <data>
         <display>
         <title>在github上搭建hexo博客</title>
@@ -236,9 +236,9 @@
         <title>解决gulp-imagemin执行时enoent.js错误问题</title>
         <pubTime>2017-11-12T11:25:25.000Z</pubTime>
         
-        <tag>gulp-imagemin</tag>
-         
         <tag>gulp</tag>
+         
+        <tag>gulp-imagemin</tag>
          
          
            
