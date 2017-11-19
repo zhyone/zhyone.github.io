@@ -4,14 +4,86 @@
 
     
   <url>
+    <loc>http://zhy.one/html/hexo-github.html</loc>
+    <lastmod>2017-11-19T05:45:05.838Z</lastmod>
+    <data>
+        <display>
+        <title>在github上搭建hexo博客</title>
+        <pubTime>2017-11-19T03:08:03.000Z</pubTime>
+        
+        <tag>github</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-next-gitment.html</loc>
+    <lastmod>2017-11-17T06:01:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>用gitment为hexo增加评论功能</title>
+        <pubTime>2017-11-17T05:40:32.000Z</pubTime>
+        
+        <tag>gitment</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhy.one/html/hexo-addlink.html</loc>
-    <lastmod>2017-11-16T15:23:38.378Z</lastmod>
+    <lastmod>2017-11-17T04:49:14.000Z</lastmod>
     <data>
         <display>
         <title>用hexo-addlink在文章尾部插入当前文章链接</title>
         <pubTime>2017-11-16T15:18:00.000Z</pubTime>
         
         <tag>addlink</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-baidu-url-submit-seo.html</loc>
+    <lastmod>2017-11-17T03:27:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>seo优化：hexo-baidu-url-submit主动提交链接</title>
+        <pubTime>2017-11-17T02:56:06.000Z</pubTime>
+        
+        <tag>seo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://zhy.one/html/hexo-coding-github-both-repo.html</loc>
+    <lastmod>2017-11-17T03:23:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>将hexo同时部署到coding和github上</title>
+        <pubTime>2017-11-15T08:17:00.000Z</pubTime>
+        
+        <tag>coding</tag>
+         
+        <tag>github</tag>
          
          
            
@@ -29,25 +101,6 @@
         <pubTime>2017-11-16T15:01:32.000Z</pubTime>
         
         <tag>sitemap</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://zhy.one/html/hexo-coding-github-both-repo.html</loc>
-    <lastmod>2017-11-15T12:30:55.935Z</lastmod>
-    <data>
-        <display>
-        <title>将hexo同时部署到coding和github上</title>
-        <pubTime>2017-11-15T08:17:00.000Z</pubTime>
-        
-        <tag>coding</tag>
-         
-        <tag>github</tag>
          
          
            
@@ -183,9 +236,9 @@
         <title>解决gulp-imagemin执行时enoent.js错误问题</title>
         <pubTime>2017-11-12T11:25:25.000Z</pubTime>
         
-        <tag>gulp</tag>
-         
         <tag>gulp-imagemin</tag>
+         
+        <tag>gulp</tag>
          
          
            
