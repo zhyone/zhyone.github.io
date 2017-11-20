@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://zhy.one/html/git-ftp.html</loc>
-    <lastmod>2017-11-20T13:15:23.082Z</lastmod>
+    <lastmod>2017-11-20T14:20:09.187Z</lastmod>
     <data>
         <display>
         <title>用git-ftp上传代码到虚拟空间</title>
@@ -253,9 +253,9 @@
         <title>解决gulp-imagemin执行时enoent.js错误问题</title>
         <pubTime>2017-11-12T11:25:25.000Z</pubTime>
         
-        <tag>gulp</tag>
-         
         <tag>gulp-imagemin</tag>
+         
+        <tag>gulp</tag>
          
          
            
