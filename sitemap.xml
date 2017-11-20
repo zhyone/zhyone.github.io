@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhy.one/html/git-ftp.html</loc>
+    
+    <lastmod>2017-11-20T13:15:23.082Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhy.one/html/hexo-github.html</loc>
     
     <lastmod>2017-11-19T05:59:28.765Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>http://zhy.one/html/nodejs-install-permission-windows10.html</loc>
     
     <lastmod>2017-11-12T09:34:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhy.one/404/index.html</loc>
-    
-    <lastmod>2017-11-08T07:46:44.585Z</lastmod>
     
   </url>
   

@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://zhy.one/html/git-ftp.html</loc>
+    <lastmod>2017-11-20T13:15:23.082Z</lastmod>
+    <data>
+        <display>
+        <title>用git-ftp上传代码到虚拟空间</title>
+        <pubTime>2017-11-20T05:33:29.000Z</pubTime>
+        
+        <tag>git-ftp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhy.one/html/hexo-github.html</loc>
     <lastmod>2017-11-19T05:59:28.765Z</lastmod>
     <data>
@@ -263,5 +280,4 @@
     </data>
     </url>
 
-    
 </urlset>
