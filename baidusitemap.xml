@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://zhy.one/html/hexo-algolia-landscape.html</loc>
+    <lastmod>2017-11-26T08:28:58.008Z</lastmod>
+    <data>
+        <display>
+        <title>为hexo的landscape主题增加algolia搜索功能</title>
+        <pubTime>2017-11-26T06:50:07.000Z</pubTime>
+        
+        <tag>algolia</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://zhy.one/html/git-ftp.html</loc>
-    <lastmod>2017-11-20T14:20:09.187Z</lastmod>
+    <lastmod>2017-11-20T14:33:49.054Z</lastmod>
     <data>
         <display>
         <title>用git-ftp上传代码到虚拟空间</title>
@@ -253,9 +270,9 @@
         <title>解决gulp-imagemin执行时enoent.js错误问题</title>
         <pubTime>2017-11-12T11:25:25.000Z</pubTime>
         
-        <tag>gulp-imagemin</tag>
-         
         <tag>gulp</tag>
+         
+        <tag>gulp-imagemin</tag>
          
          
            
