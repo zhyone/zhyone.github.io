@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhy.one/html/hexo-multi-menu.html</loc>
+    
+    <lastmod>2017-12-09T13:20:40.814Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zhy.one/html/hexo-algolia-landscape.html</loc>
     
     <lastmod>2017-11-26T09:01:50.721Z</lastmod>
